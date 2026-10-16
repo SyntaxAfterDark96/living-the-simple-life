@@ -1,0 +1,309 @@
+/* ========================================
+   1. GLOBAL STYLES
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #707070;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    color: #2e2d2d;
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   2. LAYOUT
+======================================== */
+
+.wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.wrapper-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ========================================
+   3. TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+.article-title {
+    margin-top: -.5em;
+    font-family: 'Lora', serif;
+}
+
+h1 {
+    margin-bottom: 0.125em;
+    color: #143774;
+    font-size: 3.375rem;
+}
+
+h2,
+h3,
+.article-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.subtitle {
+    margin-top: 0;
+    color: #1792d2;
+    font-family: 'Italianno', cursive;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.125em;
+    text-transform: capitalize;
+}
+
+.article-body {
+    margin-top: .5em;
+    font-family: u;
+}
+
+
+/* ========================================
+   4. HEADER
+======================================== */
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1em 3em;
+    background-color: #dbdada;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.header-container {
+    position: relative;
+}
+
+#sun {
+    position: absolute;
+    top: -4px;
+    width: 150px;
+}
+
+
+/* ========================================
+   5. NAVIGATION
+======================================== */
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 450;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.25em 0;
+}
+
+
+/* ========================================
+   6. ARTICLES
+======================================== */
+
+.article-read-more,
+.article-info {
+    font-size: 0.875rem;
+}
+
+.article-read-more {
+    color: #1792d2;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.article-read-more:hover,
+.article-read-more:focus-visible {
+    color: #143774;
+}
+
+.article-info {
+    margin: 2em 0;
+}
+
+.article-featured {
+    border-bottom: grey 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+.article-img {
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ========================================
+   7. WIDGET
+======================================== */
+.sidebar-widget  {
+    border: #d4d4d4 solid 10px;
+    margin-top: 2.8em;
+    padding: 1em;   
+    font-size: medium;
+}
+
+
+.widget-recent-post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+
+}
+.widget-recent-post-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    order: 2;
+    border-bottom: 2.5px solid #dbdada;
+    
+}
+
+.widget-img {
+    order: 1;
+    margin-bottom: 1em;
+}
+
+
+
+
+
+/* ========================================
+   8. FOOTER
+======================================== */
+
+footer {
+    padding: 2.5em 1em;
+    background-color: #143774;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer p:first-child {
+    font-weight: 700;
+}
+
+footer p:last-child {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   8. RESPONSIVE STYLES
+======================================== */
+
+@media (min-width: 675px) {
+    .wrapper-flex {
+        flex-direction: row;
+    }
+
+    main {
+        width: 75%;
+    }
+
+    aside {
+        width: 20%;
+    }
+}
+
+@media (min-width: 675px) {
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-recent-main {
+        width: 65%;
+
+
+    }
+
+    .article-recent-secondary {
+        width: 25%;
+    }
+
+}
+
+@media (min-width: 675px){
+    .article-recent-main,
+    .article-recent-secondary  {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .article-img {
+    order: 1;
+}
+
+.article-info {
+    order: 2;
+}
+}
+
